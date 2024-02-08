@@ -28,7 +28,7 @@ const Blog_01 = () => {
                     React.js is an open-source JavaScript library used for building user interfaces, especially for single-page applications where the content is dynamically updated as the user interacts with the application. Introduced by Jordan Walke, a software engineer at Facebook, React was first deployed on Facebook's newsfeed in 2011 and later made open-source.
                 </p>
                 <img
-                    className='w-[90%] md:w-1/2 mx-auto mb-3 rounded-lg'
+                    className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
                     src="/images/blogs/blog/blog_01/01_what_is_react.png"
                     alt="cover image"
                 />
@@ -45,16 +45,26 @@ const Blog_01 = () => {
                 <p className="text-gray-300 text-lg mb-2 leading-relaxed">
                     In React, everything is a component. A component is a self-contained, reusable building block that encapsulates a piece of the user interface. Components can be simple, representing a button or an input field, or complex, representing an entire page.
                 </p>
+                <img
+                    className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
+                    src="/images/blogs/blog/blog_01/components.png"
+                    alt="cover image"
+                />
                 <h3 className='text-gray-200 text-xl font-semibold'>JSX (JavaScript XML)</h3>
                 <p className="text-gray-300 text-lg mb-2 leading-relaxed">
                     React uses JSX, a syntax extension for JavaScript, which allows you to write HTML within JavaScript code. This makes the creation of React elements more intuitive and visually appealing. JSX gets transpiled into regular JavaScript during the build process.
                 </p>
+                <img
+                    className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
+                    src="/images/blogs/blog/blog_01/jsx.png"
+                    alt="cover image"
+                />
                 <h3 className='text-gray-200 text-xl font-semibold'>Virtual DOM</h3>
                 <p className="text-gray-300 text-lg mb-4 leading-relaxed">
                     One of React's key optimizations is the use of a Virtual DOM. Instead of manipulating the actual DOM directly, React creates a virtual representation of it in memory. When the state of a component changes, React first updates the virtual DOM and then efficiently calculates the minimal number of changes needed to update the actual DOM.
                 </p>
                 <img
-                    className='w-[90%] md:w-[90%] mx-auto mb-3 rounded-lg'
+                    className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
                     src="/images/blogs/blog/blog_01/virtual_dom.png"
                     alt="cover image"
                 />
@@ -91,14 +101,29 @@ const Blog_01 = () => {
                 <p className="text-gray-300 text-lg mb-2 leading-relaxed">
                     To get started with React, you can use tools like Create React App, which sets up a new React project with a minimal configuration. Alternatively, you can set up React manually using tools like Webpack and Babel.
                 </p>
+                <img
+                    className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
+                    src="/images/blogs/blog/blog_01/installation.png"
+                    alt="cover image"
+                />
                 <h3 className='text-gray-200 text-xl font-semibold'>Creating Components</h3>
                 <p className="text-gray-300 text-lg mb-2 leading-relaxed">
                     Creating a React component involves defining a JavaScript function or class that returns JSX. Components can have state, allowing them to manage and respond to changes in data.
                 </p>
+                <img
+                    className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
+                    src="/images/blogs/blog/blog_01/create_component.png"
+                    alt="cover image"
+                />
                 <h3 className='text-gray-200 text-xl font-semibold'>State and Props</h3>
                 <p className="text-gray-300 text-lg mb-4 leading-relaxed">
                     State represents the internal data of a component, and props (short for properties) are inputs passed to a component. By managing state and props, React components can dynamically update their UI based on user interactions or changes in data.
                 </p>
+                <img
+                    className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
+                    src="/images/blogs/blog/blog_01/prop_vs_state.png"
+                    alt="cover image"
+                />
             </section>
 
             {/* Conclusion */}
