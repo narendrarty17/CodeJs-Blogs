@@ -1,0 +1,25 @@
+[
+  {
+    "id": 0,
+    "link": "home",
+    "linkText": "Home",
+    "url": "/"
+  },
+  {
+    "id": 1,
+    "link": "mycourses",
+    "linkText": "My Courses",
+    "url": "/mycourses"
+  },
+  {
+    "id": 2,
+    "linkText": "Contact",
+    "url": "/contact"
+  },
+  {
+    "id": 3,
+    "link": "blogs",
+    "linkText": "Blogs",
+    "url": "/blogs"
+  }
+]
