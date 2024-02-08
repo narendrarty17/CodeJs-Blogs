@@ -27,8 +27,13 @@ const Blog_01 = () => {
                 <p className="text-gray-300 text-lg mb-3  leading-relaxed">
                     React.js is an open-source JavaScript library used for building user interfaces, especially for single-page applications where the content is dynamically updated as the user interacts with the application. Introduced by Jordan Walke, a software engineer at Facebook, React was first deployed on Facebook's newsfeed in 2011 and later made open-source.
                 </p>
+                <img
+                    className='w-[90%] md:w-1/2 mx-auto mb-3 rounded-lg'
+                    src="/images/blogs/blog/blog_01/01_what_is_react.png"
+                    alt="cover image"
+                />
                 <h3 className='text-gray-200 text-xl font-semibold'>Declarative and Component-Based</h3>
-                <p className="text-gray-300 text-lg  mb-4  leading-relaxed">
+                <p className="text-gray-300 text-lg  mb-3  leading-relaxed">
                     React adopts a declarative approach to programming, allowing developers to describe how the UI should look and behave, and React takes care of the underlying complexities to make it happen. It is also heavily component-based, encouraging the creation of modular and reusable UI components.
                 </p>
             </section>
@@ -48,6 +53,11 @@ const Blog_01 = () => {
                 <p className="text-gray-300 text-lg mb-4 leading-relaxed">
                     One of React's key optimizations is the use of a Virtual DOM. Instead of manipulating the actual DOM directly, React creates a virtual representation of it in memory. When the state of a component changes, React first updates the virtual DOM and then efficiently calculates the minimal number of changes needed to update the actual DOM.
                 </p>
+                <img
+                    className='w-[90%] md:w-[90%] mx-auto mb-3 rounded-lg'
+                    src="/images/blogs/blog/blog_01/virtual_dom.png"
+                    alt="cover image"
+                />
             </section>
 
             {/* React's Benefits */}
