@@ -1,14 +1,24 @@
 import React from 'react';
 
+import Image from 'next/image';
+
+import { allBlogs } from 'contentlayer/generated';
+
 const Blog_01 = () => {
+    const blog = allBlogs[0];
+    const coverImg = blog.image.filePath.replace("../public", "");
+    console.log("blog image url: ", blog.image.filePath.replace("../public", ""));
+
     return (
         <div className="font-roboto px-1 md:pl-4">
 
             {/* Cover Image */}
-            <img
-                className='w-full mb-4 rounded-lg'
-                src="/images/blogs/blog/blog_01/cover.png"
+            <Image
+                className='w-full h-screen-1/2 mb-4 rounded-lg'
+                src={coverImg}
                 alt="cover image"
+                width={200}
+                height={50}
             />
             {/* Main Heading */}
             <h1 className="text-gray-200 text-3xl font-bold mb-4">Understanding React.js: An Introduction</h1>
