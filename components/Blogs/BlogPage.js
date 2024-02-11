@@ -6,6 +6,7 @@ import SocialMediaIcons from './pageComponents/SocialMediaIcons';
 
 import Blog_01 from './blogContent/blog_01_content';
 import Sidebar from './pageComponents/Sidebar';
+import DocDisplay from './blogContent/DocDisplay';
 
 const BlogPage = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -49,7 +50,7 @@ const BlogPage = () => {
 
                     {/* Blog Content */}
                     <div className="mb-8">
-                        <Blog_01 />
+                        <DocDisplay />
                     </div>
                 </div>
                 {/* Sidebar (only visible on large screens) */}

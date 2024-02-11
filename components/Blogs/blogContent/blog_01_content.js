@@ -1,24 +1,14 @@
 import React from 'react';
 
-import Image from 'next/image';
-
-import { allBlogs } from 'contentlayer/generated';
-
 const Blog_01 = () => {
-    const blog = allBlogs[0];
-    const coverImg = blog.image.filePath.replace("../public", "");
-    console.log("blog image url: ", blog.image.filePath.replace("../public", ""));
-
     return (
         <div className="font-roboto px-1 md:pl-4">
 
             {/* Cover Image */}
-            <Image
-                className='w-full h-screen-1/2 mb-4 rounded-lg'
-                src={coverImg}
+            <img
+                className='w-full mb-4 rounded-lg'
+                src="/images/blogs/blogContent/blog_01/cover.png"
                 alt="cover image"
-                width={200}
-                height={50}
             />
             {/* Main Heading */}
             <h1 className="text-gray-200 text-3xl font-bold mb-4">Understanding React.js: An Introduction</h1>
@@ -39,7 +29,7 @@ const Blog_01 = () => {
                 </p>
                 <img
                     className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
-                    src="/images/blogs/blog/blog_01/01_what_is_react.png"
+                    src="/images/blogs/blogContent/blog_01/01_what_is_react.png"
                     alt="cover image"
                 />
                 <h3 className='text-gray-200 text-xl font-semibold'>Declarative and Component-Based</h3>
@@ -57,7 +47,7 @@ const Blog_01 = () => {
                 </p>
                 <img
                     className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
-                    src="/images/blogs/blog/blog_01/components.png"
+                    src="/images/blogs/blogContent/blog_01/components.png"
                     alt="cover image"
                 />
                 <h3 className='text-gray-200 text-xl font-semibold'>JSX (JavaScript XML)</h3>
@@ -66,7 +56,7 @@ const Blog_01 = () => {
                 </p>
                 <img
                     className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
-                    src="/images/blogs/blog/blog_01/jsx.png"
+                    src="/images/blogs/blogContent/blog_01/jsx.png"
                     alt="cover image"
                 />
                 <h3 className='text-gray-200 text-xl font-semibold'>Virtual DOM</h3>
@@ -75,7 +65,7 @@ const Blog_01 = () => {
                 </p>
                 <img
                     className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
-                    src="/images/blogs/blog/blog_01/virtual_dom.png"
+                    src="/images/blogs/blogContent/blog_01/virtual_dom.png"
                     alt="cover image"
                 />
             </section>
@@ -113,7 +103,7 @@ const Blog_01 = () => {
                 </p>
                 <img
                     className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
-                    src="/images/blogs/blog/blog_01/installation.png"
+                    src="/images/blogs/blogContent/blog_01/installation.png"
                     alt="cover image"
                 />
                 <h3 className='text-gray-200 text-xl font-semibold'>Creating Components</h3>
@@ -122,7 +112,7 @@ const Blog_01 = () => {
                 </p>
                 <img
                     className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
-                    src="/images/blogs/blog/blog_01/create_component.png"
+                    src="/images/blogs/blogContent/blog_01/create_component.png"
                     alt="cover image"
                 />
                 <h3 className='text-gray-200 text-xl font-semibold'>State and Props</h3>
@@ -131,7 +121,7 @@ const Blog_01 = () => {
                 </p>
                 <img
                     className='w-[100%] md:w-[70%] mx-auto mb-3 rounded-lg'
-                    src="/images/blogs/blog/blog_01/prop_vs_state.png"
+                    src="/images/blogs/blogContent/blog_01/prop_vs_state.png"
                     alt="cover image"
                 />
             </section>
