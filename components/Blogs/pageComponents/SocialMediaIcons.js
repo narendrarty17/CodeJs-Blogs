@@ -1,14 +1,15 @@
 import socialMediaIconData from '@/public/data/blogs/socialMediaIcons';
+import Link from 'next/link';
 
-const SocialMediaIcons = () => (
-    socialMediaIconData.map((icon) => (
-        <a key={icon.id} href="#" className="text-blue-500">
+const SocialMediaIcons = ({ links }) => (
+    links.map((link, index) => (
+        <Link key={index} href={link.src} className="text-blue-500">
             <img
                 className='w-4 h-4'
-                src={icon.src}
-                alt={icon.alt}
+                src={link.iconURL}
+                alt={link.alt}
             />
-        </a>
+        </Link>
     ))
 );
 

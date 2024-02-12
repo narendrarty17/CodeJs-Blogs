@@ -9,7 +9,7 @@ const VideoCard = () => {
                 <div className="mb-2">
                     <img
                         className="w-full h-32 md:h-40 lg:h-48 object-cover"
-                        src="/images/blogs/blog/blog_01/blogIcon.png"
+                        src="/images/blogs/blogContent/blog_01/blogIcon.png"
                         alt="Blog Image"
                     />
                 </div>

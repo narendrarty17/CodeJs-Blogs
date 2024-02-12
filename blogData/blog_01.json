@@ -3,19 +3,37 @@
   "type": "main",
   "title": "Understanding React.js: An Introduction",
   "coverImage": "/images/blogs/blogContent/blog_01/cover.png",
-  "author": "Vishal Sharma",
-  "authorImage": "/images/blogs/blogContent/authorLogo.png",
-  "socialMediaLinks": {
-    "facebook": "/",
-    "linkedin": "/",
-    "twitter": "/",
-    "bookmark": "/"
+  "author": {
+    "name": "Vishal Sharma",
+    "image": "/images/blogs/blogContent/blog_01/authorLogo.png",
+    "publicationDate": "5 July, 2023",
+    "socialMediaLinks": [
+      {
+        "alt": "facebook",
+        "iconURL": "/images/blogs/blogpage/socialMedia/facebook.svg",
+        "src": "/"
+      },
+      {
+        "alt": "linkedin",
+        "iconURL": "/images/blogs/blogpage/socialMedia/linkedin.svg",
+        "src": "/"
+      },
+      {
+        "alt": "twitter",
+        "iconURL": "/images/blogs/blogpage/socialMedia/twitter.svg",
+        "src": "/"
+      },
+      {
+        "alt": "bookmark",
+        "iconURL": "/images/blogs/blogpage/socialMedia/bookmark.svg",
+        "src": "/"
+      }
+    ]
   },
-  "publicationDate": "5 July, 2023",
   "content": [
     {
       "heading": "Introduction",
-      "content": "In the ever-evolving landscape of web development, React.js has emerged as a powerful and widely-used JavaScript library for building user interfaces. Developed and maintained by Facebook, React.js, commonly referred to as React, provides developers with a declarative and efficient way to create dynamic, interactive, and scalable user interfaces."
+      "content": "In the ever-evolving [link example](https://google.com) *italicized text* landscape of web development, React.js has emerged as a powerful and widely-used JavaScript library for building user interfaces. Developed and maintained by Facebook, React.js, commonly referred to as React, provides developers with a declarative and efficient way to create dynamic, interactive, and scalable user interfaces."
     },
     {
       "heading": "What is React JS?",
@@ -24,7 +42,7 @@
       "subsections": [
         {
           "heading": "Declarative and Component-Based",
-          "content": "React adopts a declarative approach to programming, allowing developers to describe how the UI should look and behave, and React takes care of the underlying complexities to make it happen. It is also heavily component-based, encouraging the creation of modular and reusable UI components."
+          "content": "React adopts a [link]declarative[.link] approach to programming, allowing developers to describe how the UI should look and behave, and React takes care of the underlying complexities to make it happen. It is also heavily component-based, encouraging the creation of modular and reusable UI components."
         }
       ]
     },
