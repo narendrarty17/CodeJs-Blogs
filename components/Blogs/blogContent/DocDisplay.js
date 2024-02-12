@@ -26,17 +26,62 @@ const SubSections = ({ subsections }) => {
                             alt="cover image"
                         />)
                     }
+                    {
+                        subsection.code && (
+                            <Code code={subsection.code} />
+                        )
+                    }
                 </div>
             );
         })
     )
 }
 
+const Code = ({ code }) => {
+    return (
+        <div>
+            <div className='rounded-t-md px-5 py-2 max-w-[768px] lg:max-w-[900px] bg-gray-700 text-gray-200 font-bold'>
+                Code
+            </div>
+            <div className='rounded-b-md px-5 py-2 max-w-[768px] lg:max-w-[900px] text-white bg-gray-500'>
+                {code}
+            </div>
+        </div>
+    );
+}
+
+const Section = ({ key, section }) => {
+    return (
+        <section key={key} className="mb-12"> {/* Added key prop */}
+            <h2 className="text-gray-200 text-2xl font-bold mb-4">
+                {section.heading}
+            </h2>
+            {/* Render section content */}
+            {section.content && (
+                <p className="text-gray-300 text-lg mb-4 leading-relaxed">
+                    {section.content}
+                </p>
+            )}
+            {/* Render section image */}
+            {section.image && (
+                <img
+                    className='w-[100%] md:w-[70%] mx-auto mb-4 rounded-lg'
+                    src={section.image}
+                    alt="cover image"
+                />
+            )}
+            {/* Render subsections if they exist */}
+            {section.subsections && (
+                <SubSections subsections={section.subsections} />
+            )}
+        </section>
+    );
+}
+
 // Define the DocDisplay component
 const DocDisplay = () => {
     return (
         <div className="font-roboto px-1 md:pl-4">
-
             {/* Cover Image */}
             <img
                 className='w-full mb-4 rounded-lg'
@@ -49,29 +94,10 @@ const DocDisplay = () => {
             </h1>
             {/* Render the Body */}
             {blogData.content.map((section, index) => (
-                <section key={index} className="mb-12"> {/* Added key prop */}
-                    <h2 className="text-gray-200 text-2xl font-bold mb-4">
-                        {section.heading}
-                    </h2>
-                    {/* Render section content */}
-                    {section.content && (
-                        <p className="text-gray-300 text-lg mb-4 leading-relaxed">
-                            {section.content}
-                        </p>
-                    )}
-                    {/* Render section image */}
-                    {section.image && (
-                        <img
-                            className='w-[100%] md:w-[70%] mx-auto mb-4 rounded-lg'
-                            src={section.image}
-                            alt="cover image"
-                        />
-                    )}
-                    {/* Render subsections if they exist */}
-                    {section.subsections && (
-                        <SubSections subsections={section.subsections} />
-                    )}
-                </section>
+                <Section
+                    key={index}
+                    section={section}
+                />
             ))}
         </div>
     );

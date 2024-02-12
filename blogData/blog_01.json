@@ -1,8 +1,10 @@
 {
+  "id": 0,
+  "type": "main",
   "title": "Understanding React.js: An Introduction",
   "coverImage": "/images/blogs/blogContent/blog_01/cover.png",
   "author": "Vishal Sharma",
-  "authorImage": "/images/blogs/blogpage/authorLogo.png",
+  "authorImage": "/images/blogs/blogContent/authorLogo.png",
   "socialMediaLinks": {
     "facebook": "/",
     "linkedin": "/",
@@ -69,7 +71,7 @@
         {
           "heading": "Installation",
           "content": "To get started with React, you can use tools like Create React App, which sets up a new React project with a minimal configuration. Alternatively, you can set up React manually using tools like Webpack and Babel.",
-          "image": "/images/blogs/blogContent/blog_01/installation.png"
+          "code": "npx create-next-app@latest"
         },
         {
           "heading": "Creating Components",
