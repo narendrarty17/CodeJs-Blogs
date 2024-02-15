@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from 'react';
 
 import IsSmallScreenContext from './pageComponents/IsSmallScreenContext';
-
-import Sidebar from './pageComponents/Sidebar';
 import DocDisplay from './pageComponents/DocDisplay';
 
 const BlogPage = () => {
@@ -17,8 +15,6 @@ const BlogPage = () => {
         handleResize(); // Initial check
         window.addEventListener('resize', handleResize);
 
-        console.log(isSmallScreen);
-
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -26,11 +22,7 @@ const BlogPage = () => {
 
     return (
         <IsSmallScreenContext.Provider value={isSmallScreen} >
-            <div className='flex flex-col lg:flex-row'>
-                <DocDisplay />
-                {/* Sidebar (only visible on large screens) */}
-                <Sidebar />
-            </div>
+            <DocDisplay />
         </IsSmallScreenContext.Provider>
     )
 };

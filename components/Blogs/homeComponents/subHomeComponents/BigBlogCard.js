@@ -1,36 +1,77 @@
+import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 
-const BigBlogCard = () => {
+function limitLetters(text, maxLength) {
+    if (text.length <= maxLength) {
+        return text; // Return the original text if it's already within the limit
+    } else {
+        return text.substring(0, maxLength) + '...'; // Return the truncated text with ellipsis
+    }
+}
+
+const BigBlogCard = ({ id, type }) => {
+    const [blogData, setBlogData] = useState(null);
+
+    // Constructing the URL for the blog
+    const url = `/blog?id=${id}&type=${type}`;
+
+    useEffect(() => {
+        const fetchJsonData = async () => {
+            try {
+                // Dynamically import the JSON file based on id
+                const jsonModule = await import(`@/blogData/${type}/${id}.json`);
+                // Access the default export (JSON data)
+                const data = jsonModule.default;
+                setBlogData(data);
+            } catch (error) {
+                console.error('Error fetching JSON data:', error);
+            }
+        };
+
+        fetchJsonData();
+    }, [id, type]);
+
     return (
         <div className="flex flex-col gap-4">
-            <Link href="/blog?blogId=1">
-                <div className="max-w-lg mx-auto">
-                    {/* Image Section */}
-                    <div className="mb-2">
-                        <img
-                            className="w-full h-56 object-cover"
-                            src="/images/blogs/blogContent/blog_01/blogIcon.png"
-                            alt="Blog Image"
-                        />
-                    </div>
+            {/* Adding a conditional rendering to ensure blogData is available */}
+            {blogData && (
+                <Link href={url}>
+                    <div className="max-w-lg mx-auto">
+                        {/* Image Section */}
+                        <div className="mb-2">
+                            {/* Conditional rendering for the image */}
+                            <img
+                                className="w-full h-56 object-cover"
+                                src={`/images/blogs/blogContent/${type}/${id}/${blogData.iconImage}`}
+                                alt="Blog Image"
+                            />
+                        </div>
 
-                    {/* Category Section */}
-                    <div className="mb-1 text-gray-400">
-                        Programming
-                    </div>
+                        {/* Category Section */}
+                        <div className="mb-1 text-gray-400">
+                            {Array.isArray(blogData.category) ? (
+                                // Code to render all the categories in the array
+                                blogData.category.map((cat, index) => {
+                                    return (
+                                        <span>
+                                                // code to seperate categories with | symbol
+                                            {`${cat} ${index != blogData.category.length - 1 ? ("| ") : ""}`}
+                                        </span>
+                                    )
+                                })
+                            ) : blogData.category}
+                        </div>
 
-                    {/* Title Section */}
-                    <h3 className="text-2xl pb-2">
-                        Use of VR to display websites in 3D
-                    </h3>
-                    <p className="text-gray-300 pb-4">
-                        The modern career requires a development plan to match.
-                        Discover how the 360-Degree Career Framework
-                        can assist multidimensional growth that delivers a more
-                        balanced and fulfilling career.
-                    </p>
-                </div>
-            </Link>
+                        {/* Title Section */}
+                        <h3 className="text-2xl pb-2">
+                            {blogData.title}
+                        </h3>
+                        <p className="text-gray-300 pb-4">
+                            {limitLetters(blogData.description, 250)}
+                        </p>
+                    </div>
+                </Link>
+            )}
             <button className="text-lg bg-blue-500 text-white py-3 px-3 w-32 rounded-full">
                 Read me
             </button>

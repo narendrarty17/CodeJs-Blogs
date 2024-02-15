@@ -1,6 +1,6 @@
 import SuggestedReads from "./SuggestedReads";
 
-const Sidebar = () => {
+const Sidebar = ({ author, id, type }) => {
     return (
         <div className="w-full lg:w-1/5 px-4 py-8">
             {/* Search Bar */}
@@ -14,18 +14,23 @@ const Sidebar = () => {
                 {/* Author Info */}
                 <div className="flex items-center mb-4">
                     {/* Author Logo */}
-                    <img src="/images/blogs/blogpage/authorLogo.png" alt="Author Logo" className="w-10 h-10 rounded-full mr-4" />
+                    <img
+                        src={`/images/blogs/blogContent/${type}/${id}/${author.image}`}
+                        alt="Author Logo"
+                        className="w-10 h-10 rounded-full mr-4"
+                    />
                     {/* Author Info */}
                     <div>
-                        <h2 className="text-sm font-bold">Vishal Sharma</h2>
-                        <p className="text-[12px] text-gray-500">267k followers</p>
+                        <h2 className="text-sm font-bold">{author.name}</h2>
+                        <p className="text-[12px] text-gray-500">
+                            {author.followers}k followers
+                        </p>
                     </div>
                 </div>
 
                 {/* Short Paragraph about the Author */}
                 <p className='text-[12px] text-gray-400'>
-                    Lead UX Designer @ Slack. Loves travelling and lives for backstage action!
-                    Love to design user centric products and understanding consumer behaviour
+                    {author.description}
                 </p>
             </div>
 
@@ -34,7 +39,10 @@ const Sidebar = () => {
                 <h2 className="text-lg font-bold mb-4">Suggested Reads</h2>
                 {/* Add your suggested reads links or components here */}
                 <ul className="flex flex-wrap flex-row lg:flex-col">
-                    <SuggestedReads />
+                    <SuggestedReads
+                        id={id}
+                        type={type}
+                    />
                 </ul>
             </div>
         </div>

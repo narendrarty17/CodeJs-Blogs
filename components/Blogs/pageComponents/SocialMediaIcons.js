@@ -1,4 +1,3 @@
-import socialMediaIconData from '@/public/data/blogs/socialMediaIcons';
 import Link from 'next/link';
 
 const SocialMediaIcons = ({ links }) => (
