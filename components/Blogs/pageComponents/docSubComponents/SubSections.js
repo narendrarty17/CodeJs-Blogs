@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import IdTypeContext from "../IdTypeContext";
+import { IdTypeContext } from "./../Context";
 import Code from "./Code";
 import ParseParagraph from "./ParseParagraph";
 

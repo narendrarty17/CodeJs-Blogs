@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import SuggestedReads from "./SuggestedReads";
-import IdTypeContext from "./IdTypeContext";
+import SuggestedReads from "./sidebarSubComponents/SuggestedReads";
+import { IdTypeContext } from "./Context";
 
 const Sidebar = ({ author }) => {
     const { id, type } = useContext(IdTypeContext);

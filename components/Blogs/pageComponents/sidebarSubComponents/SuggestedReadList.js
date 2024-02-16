@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { useContext, useState } from "react";
-import IsSmallScreenContext from "./IsSmallScreenContext";
+import { useContext } from "react";
+import { IsSmallScreenContext } from '../Context';
 
 const SuggestedReadList = ({ suggestedReads }) => {
     const isSmallScreen = useContext(IsSmallScreenContext);

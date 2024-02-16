@@ -1,7 +1,6 @@
-import BlogCardVertical from "./subHomeComponents/BlogCardVertical";
-import VideoCard from "./subHomeComponents/VideoCard";
+import VideoCard from "@/components/Blogs/cards/VideoCard";
 
-const TopVideos = () => {
+const VideoCardSegment = () => {
     return (
         <div className="flex flex-col bg-gray-800 gap-4 py-8">
             <h1 className="text-2xl px-8 md:px-20">Top Videos</h1>
@@ -14,4 +13,4 @@ const TopVideos = () => {
     );
 }
 
-export default TopVideos;
+export default VideoCardSegment;

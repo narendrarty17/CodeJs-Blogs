@@ -4,7 +4,7 @@ import React from 'react';
 
 const Newsletter = () => {
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center bg-gray-700 pt-16 pb-8">
             <div className="px-10 pb-10 md:flex flex-col gap-10 md:gap-16 md:flex-row md:items-start md:justify-between">
                 {/* Left Section */}
                 <div className="max-w-md mb-4 md:mb-0">

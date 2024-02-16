@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import Section from './docSubComponents/Section';
 import AuthorInfoHeader from './docSubComponents/AuthorInfoHeader';
 import Sidebar from './Sidebar';
-import IdTypeContext from './IdTypeContext';
+import { IdTypeContext } from './Context';
 
 // Define the DocDisplay component
 const DocDisplay = () => {

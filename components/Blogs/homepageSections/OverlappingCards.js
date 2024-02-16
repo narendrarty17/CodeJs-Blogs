@@ -1,7 +1,6 @@
-import BlogCardHorizontal from "./subHomeComponents/BlogCardHorizontal";
-import OverlappingCard from "./subHomeComponents/OverlappingCard";
+import OverlappingCard from "@/components/Blogs/cards/OverlappingCard";
 
-const Learning = () => {
+const OverlappingCardSegment = () => {
     return (
         <div className="px-6 md:px-8 lg:px-20 flex flex-col itemx-center gap-8">
             <div className="flex gap-4 justify-center md:justify-start">
@@ -20,4 +19,4 @@ const Learning = () => {
     );
 }
 
-export default Learning;
+export default OverlappingCardSegment;

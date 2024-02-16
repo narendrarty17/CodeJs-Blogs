@@ -1,7 +1,8 @@
 // BlogPage.js
 import React, { useState, useEffect } from 'react';
 
-import IsSmallScreenContext from './pageComponents/IsSmallScreenContext';
+import { IsSmallScreenContext } from './pageComponents/Context';
+// import IsSmallScreenContext from './pageComponents/IsSmallScreenContext';
 import DocDisplay from './pageComponents/DocDisplay';
 
 const BlogPage = () => {

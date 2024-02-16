@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import SocialMediaIcons from "../SocialMediaIcons";
-import IdTypeContext from "../IdTypeContext";
+import SocialMediaIcons from "./SocialMediaIcons";
+import { IdTypeContext } from "../Context";
 
 const AuthorInfoHeader = ({ author }) => {
     const { id, type } = useContext(IdTypeContext);

@@ -1,6 +1,6 @@
-import BlogCardHorizontal from "./subHomeComponents/BlogCardHorizontal";
+import BlogCardHorizontal from "@/components/Blogs/cards/BlogCardHorizontal";
 
-const CareerAdvice = () => {
+const HorizontalCardSegment = () => {
     return (
         <div className="px-8 md:px-20">
             <div className="flex gap-4 items-center">
@@ -28,4 +28,4 @@ const CareerAdvice = () => {
     );
 }
 
-export default CareerAdvice;
+export default HorizontalCardSegment;
