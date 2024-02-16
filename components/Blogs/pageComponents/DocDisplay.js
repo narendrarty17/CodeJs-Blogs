@@ -5,12 +5,14 @@ import { useRouter } from 'next/router';
 import Section from './docSubComponents/Section';
 import AuthorInfoHeader from './docSubComponents/AuthorInfoHeader';
 import Sidebar from './Sidebar';
+import IdTypeContext from './IdTypeContext';
 
 // Define the DocDisplay component
 const DocDisplay = () => {
     const [blogData, setBlogData] = useState(null);
     const router = useRouter();
     const { id, type } = router.query;
+    const IdAndType = { id, type };
 
     useEffect(() => {
         const fetchJsonData = async () => {
@@ -30,7 +32,7 @@ const DocDisplay = () => {
         fetchJsonData();
     }, [id, type]);
     return (
-        <>
+        <IdTypeContext.Provider value={IdAndType}>
             {blogData && (
                 <div className='flex flex-col lg:flex-row'>
                     <div className="flex-1 border-r border-gray-800 px-4 py-8">
@@ -50,8 +52,6 @@ const DocDisplay = () => {
                             {blogData.content.map((section, index) => (
                                 <Section
                                     key={index}
-                                    id={id}
-                                    type={type}
                                     section={section}
                                 />
                             ))}
@@ -59,12 +59,10 @@ const DocDisplay = () => {
                     </div>
                     <Sidebar
                         author={blogData.author}
-                        id={id}
-                        type={type}
                     />
                 </div>
             )}
-        </>
+        </IdTypeContext.Provider>
     );
 };
 

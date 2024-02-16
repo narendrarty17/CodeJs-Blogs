@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import IdTypeContext from "../IdTypeContext";
 import Code from "./Code";
 import ParseParagraph from "./ParseParagraph";
 
-const SubSections = ({ id, type, subsections }) => {
+const SubSections = ({ subsections }) => {
+    const { id, type } = useContext(IdTypeContext);
+
     return (
         subsections.map((subsection, index) => {
             return (

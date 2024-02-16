@@ -9,9 +9,9 @@ const Learning = () => {
                 <h1 className="text-2xl">Learning</h1>
             </div>
             <div className="flex flex-wrap flex-col gap-10 mr-[10px] items-center md:justify-between md:flex-row">
-                <OverlappingCard />
-                <OverlappingCard />
-                <OverlappingCard />
+                <OverlappingCard id={1} type="learning" />
+                <OverlappingCard id={1} type="learning" />
+                <OverlappingCard id={1} type="learning" />
             </div>
             <button className="mx-auto text-lg border-2 border-white text-white py-3 px-6 rounded-full">
                 See More

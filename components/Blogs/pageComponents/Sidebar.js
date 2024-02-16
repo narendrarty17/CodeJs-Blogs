@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import SuggestedReads from "./SuggestedReads";
+import IdTypeContext from "./IdTypeContext";
 
-const Sidebar = ({ author, id, type }) => {
+const Sidebar = ({ author }) => {
+    const { id, type } = useContext(IdTypeContext);
     return (
         <div className="w-full lg:w-1/5 px-4 py-8">
             {/* Search Bar */}

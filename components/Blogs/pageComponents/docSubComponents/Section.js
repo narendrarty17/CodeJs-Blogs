@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import ParseParagraph from "./ParseParagraph";
 import SubSections from "./SubSections";
+import IdTypeContext from "../IdTypeContext";
 
-const Section = ({ id, type, section }) => {
+const Section = ({ section }) => {
+    const { id, type } = useContext(IdTypeContext);
     return (
         <section className="mb-12"> {/* Added key prop */}
             <h2 className="text-gray-200 text-2xl font-bold mb-4">

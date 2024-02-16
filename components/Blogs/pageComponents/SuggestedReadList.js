@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useContext, useState } from "react";
 import IsSmallScreenContext from "./IsSmallScreenContext";
 
-const SuggestedReadList = ({ type, suggestedReads }) => {
+const SuggestedReadList = ({ suggestedReads }) => {
     const isSmallScreen = useContext(IsSmallScreenContext);
     const limitedSuggestedReads = suggestedReads.slice(0, isSmallScreen ? 3 : suggestedReads.length);
 
