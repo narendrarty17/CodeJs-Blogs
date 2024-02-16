@@ -2,12 +2,12 @@ import BlogCardHorizontal from "./subHomeComponents/BlogCardHorizontal";
 
 const Learning = () => {
     return (
-        <div className="px-8 md:px-20 flex flex-col itemx-center gap-8">
+        <div className="px-6 md:px-10 lg:px-20 flex flex-col itemx-center gap-8">
             <div className="flex gap-4 justify-center md:justify-start">
                 <span className="bg-green-400 w-8 h-8 rounded-full" />
-                <h1 className="text-2xl">Career Advice</h1>
+                <h1 className="text-2xl">Learning</h1>
             </div>
-            <div className="flex flex-wrap flex-col gap-10  items-center md:justify-between md:flex-row">
+            <div className="flex flex-wrap flex-col gap-10 md:gap-12  items-center md:justify-between md:flex-row">
                 <div className="relative inline-block bg-yellow-600 w-[300px] md:w-[320px] lg:w-[400px] h-[180px] md:h-[180px] lg:h-[225px] mb-14">
                     <img
                         className="w-[300px] md:w-[300px] lg:w-[400px] h-[180px] md:h-[180px] lg:h-[225px]"
