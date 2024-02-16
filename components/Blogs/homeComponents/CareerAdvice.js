@@ -21,7 +21,7 @@ const CareerAdvice = () => {
                     <BlogCardHorizontal id={6} type="careerAdvice" />
                 </div>
                 <button className="text-lg border-2 border-white text-white py-3 px-6 rounded-full">
-                    Read me
+                    See More
                 </button>
             </div>
         </div>
