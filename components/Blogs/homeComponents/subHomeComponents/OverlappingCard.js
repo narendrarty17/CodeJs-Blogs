@@ -2,7 +2,7 @@ import React from 'react'
 
 export const OverlappingCard = () => {
     return (
-        <div className="relative inline-block w-[300px] md:w-[320px] 2xl:w-[400px] h-[180px] md:h-[180px] 2xl:h-[225px] mb-16">
+        <div className="relative inline-block w-[300px] md:w-[320px] 2xl:w-[400px] h-[180px] md:h-[180px] 2xl:h-[225px] mb-14">
             <img
                 className="w-[300px] md:w-[300px] 2xl:w-[400px] h-[180px] md:h-[180px] 2xl:h-[225px]"
                 src="/images/blogIcon.png"
