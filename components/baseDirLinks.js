@@ -1,0 +1,1 @@
+export const BlogImgsBaseDir = "/images/blogs/blogContent/";

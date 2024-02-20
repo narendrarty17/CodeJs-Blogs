@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
 import { IdTypeContext } from "../Context";
+import { BlogImgsBaseDir } from "@/components/baseDirLinks";
 
 const AuthorInfoHeader = ({ author }) => {
     const { id, type } = useContext(IdTypeContext);
@@ -10,7 +11,7 @@ const AuthorInfoHeader = ({ author }) => {
             {/* Author Info */}
             <div className="flex items-center">
                 <img
-                    src={`/images/blogs/blogContent/${type}/${id}/${author.image}`}
+                    src={`${BlogImgsBaseDir}/sections/${type}/${id}/${author.image}`}
                     alt="Author Logo"
                     className="w-10 h-10 rounded-full mr-4"
                 />

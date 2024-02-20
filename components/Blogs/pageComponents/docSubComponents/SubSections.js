@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { IdTypeContext } from "./../Context";
 import Code from "./Code";
 import ParseParagraph from "./ParseParagraph";
+import { BlogImgsBaseDir } from "@/components/baseDirLinks";
 
 const SubSections = ({ subsections }) => {
     const { id, type } = useContext(IdTypeContext);
@@ -23,7 +24,7 @@ const SubSections = ({ subsections }) => {
                     {
                         subsection.image && (<img
                             className='w-[100%] md:w-[70%] mx-auto mb-4 rounded-lg'
-                            src={`/images/blogs/blogContent/${type}/${id}/${subsection.image}`}
+                            src={`${BlogImgsBaseDir}/sections/${type}/${id}/${subsection.image}`}
                             alt="cover image"
                         />)
                     }

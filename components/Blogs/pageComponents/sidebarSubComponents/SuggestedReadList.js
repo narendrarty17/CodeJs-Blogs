@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useContext } from "react";
 import { IsSmallScreenContext } from '../Context';
+import { BlogImgsBaseDir } from "@/components/baseDirLinks";
 
 const SuggestedReadList = ({ suggestedReads }) => {
     const isSmallScreen = useContext(IsSmallScreenContext);
@@ -14,7 +15,7 @@ const SuggestedReadList = ({ suggestedReads }) => {
                     <div className="pr-4">
                         <img
                             className="w-[100px] h-[80px] object-cover rounded"
-                            src={`/images/blogs/blogContent/${read.type}/${read.id}/${read.iconImage}`}
+                            src={`${BlogImgsBaseDir}/sections/${read.type}/${read.id}/${read.iconImage}`}
                             alt="Suggested Read" />
                     </div>
 

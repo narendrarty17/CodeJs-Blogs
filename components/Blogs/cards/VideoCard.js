@@ -1,3 +1,4 @@
+import { BlogImgsBaseDir } from '@/components/baseDirLinks';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
@@ -32,7 +33,7 @@ const VideoCard = ({ id, type }) => {
                         <div className="mb-2">
                             <img
                                 className="w-full h-32 md:h-40 lg:h-48 object-cover"
-                                src={`/images/blogs/blogContent/${type}/${id}/${blogData.iconImage}`}
+                                src={`${BlogImgsBaseDir}/sections/${type}/${id}/${blogData.iconImage}`}
                                 alt="Blog Image"
                             />
                         </div>

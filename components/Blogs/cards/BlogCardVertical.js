@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { BlogImgsBaseDir } from '@/components/baseDirLinks';
 
 const BlogCardVertical = ({ id, type }) => {
     const [blogData, setBlogData] = useState(null);
@@ -32,7 +33,7 @@ const BlogCardVertical = ({ id, type }) => {
                         <div className="mb-2">
                             <img
                                 className="w-full h-36 object-cover"
-                                src={`/images/blogs/blogContent/${type}/${id}/${blogData.iconImage}`}
+                                src={`${BlogImgsBaseDir}/sections/${type}/${id}/${blogData.iconImage}`}
                                 alt="Blog Image"
                             />
                         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { BlogImgsBaseDir } from '@/components/baseDirLinks';
 
 const BlogCardHorizontal = ({ id, type }) => {
     const [blogData, setBlogData] = useState(null);
@@ -32,7 +33,7 @@ const BlogCardHorizontal = ({ id, type }) => {
                         <div className="flex-shrink-0">
                             <img
                                 className="object-cover w-36 h-28 md:w-[140px] md:h-[120px] lg:w-64 lg:h-48 xl:w-72 xl:h-54 "
-                                src={`/images/blogs/blogContent/${type}/${id}/${blogData.iconImage}`}
+                                src={`${BlogImgsBaseDir}/sections/${type}/${id}/${blogData.iconImage}`}
                                 alt="Blog"
                             />
                         </div>

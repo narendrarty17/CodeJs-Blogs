@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import SuggestedReadList from "./SuggestedReadList";
 
 const SuggestedReads = ({ id, type }) => {

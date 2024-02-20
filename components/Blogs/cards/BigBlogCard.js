@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from "next/link";
+import { BlogImgsBaseDir } from '@/components/baseDirLinks';
 
 function limitLetters(text, maxLength) {
     if (text.length <= maxLength) {
@@ -42,7 +43,7 @@ const BigBlogCard = ({ id, type }) => {
                             {/* Conditional rendering for the image */}
                             <img
                                 className="w-full h-56 object-cover"
-                                src={`/images/blogs/blogContent/${type}/${id}/${blogData.iconImage}`}
+                                src={`${BlogImgsBaseDir}/sections/${type}/${id}/${blogData.iconImage}`}
                                 alt="Blog Image"
                             />
                         </div>

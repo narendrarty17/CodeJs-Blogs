@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react'
+import { BlogImgsBaseDir } from '@/components/baseDirLinks';
 
 export const OverlappingCard = ({ id, type }) => {
     const [blogData, setBlogData] = useState(null);
@@ -30,7 +31,7 @@ export const OverlappingCard = ({ id, type }) => {
                     <div className="relative inline-block w-[300px] md:w-[320px] 2xl:w-[400px] h-[180px] md:h-[180px] 2xl:h-[225px] mb-14">
                         <img
                             className="w-[300px] md:w-[300px] 2xl:w-[400px] h-[180px] md:h-[180px] 2xl:h-[225px]"
-                            src={`/images/blogs/blogContent/${type}/${id}/${blogData.iconImage}`}
+                            src={`${BlogImgsBaseDir}/sections/${type}/${id}/${blogData.iconImage}`}
                         />
                         <div className="absolute right-[-20px] mt-[-100px] ml-[12px] bg-gray-700 p-4 rounded">
                             <div className="flex flex-col gap-1">

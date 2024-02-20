@@ -6,6 +6,7 @@ import Section from './docSubComponents/Section';
 import AuthorInfoHeader from './docSubComponents/AuthorInfoHeader';
 import Sidebar from './Sidebar';
 import { IdTypeContext } from './Context';
+import { BlogImgsBaseDir } from '@/components/baseDirLinks';
 
 // Define the DocDisplay component
 const DocDisplay = () => {
@@ -41,7 +42,7 @@ const DocDisplay = () => {
                             {/* Cover Image */}
                             <img
                                 className='w-full mb-4 rounded-lg'
-                                src={`/images/blogs/blogContent/${type}/${id}/${blogData.coverImage}`}
+                                src={`${BlogImgsBaseDir}/sections/${type}/${id}/${blogData.coverImage}`}
                                 alt="cover image"
                             />
                             {/* Main Heading */}

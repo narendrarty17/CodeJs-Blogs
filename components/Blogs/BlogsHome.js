@@ -12,9 +12,9 @@ const BlogHomepage = () => {
             <BlogHeader />
             <MainBlogSection />
             <Report />
-            <HorizontalCardSegment />
+            <HorizontalCardSegment type="careerAdvice" />
             <VideoCardSegment />
-            <OverlappingCardSegment />
+            <OverlappingCardSegment type="learning" />
             <Newsletter />
         </div>
     );
