@@ -19,7 +19,7 @@ const Sidebar = ({ author }) => {
                 <div className="flex items-center mb-4">
                     {/* Author Logo */}
                     <img
-                        src={`${BlogImgsBaseDir}/sections/${type}/${id}/${author.image}`}
+                        src={`${BlogImgsBaseDir}/authorImgs/${author.image}`}
                         alt="Author Logo"
                         className="w-10 h-10 rounded-full mr-4"
                     />

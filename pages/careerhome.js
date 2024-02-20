@@ -13,7 +13,7 @@ export const CareerHome = () => {
       <Header />
       <div div className="flex flex-col gap-14">
         <SegmentHeader title="Career Advice" />
-        <SegmentMainArticle />
+        <SegmentMainArticle type="careerAdvice" id={0} />
         <HorizontalCardSegment type="home" />
         <Newsletter />
       </div>

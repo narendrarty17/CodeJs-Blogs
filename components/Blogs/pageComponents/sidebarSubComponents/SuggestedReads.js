@@ -9,7 +9,7 @@ const SuggestedReads = ({ id, type }) => {
             try {
                 if (id && type) {
                     // Dynamically import the JSON file based on id
-                    const jsonModule = await import(`@/blogData/${type}/suggested.json`);
+                    const jsonModule = await import(`@/blogData/${type}/index.json`);
                     // Access the default export (JSON data)
                     console.log("data inside suggested.json: ", jsonModule.default);
                     const data = jsonModule.default.filter((el) => {

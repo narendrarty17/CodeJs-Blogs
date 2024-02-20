@@ -8,7 +8,7 @@ const DisplayCards = ({ type }) => {
     const displaySeeMoreBtn = !(type == 'home');
 
     const cardComponents = [];
-    for (let i = 1; i <= numIterations; i += 2) {
+    for (let i = 1; i <= numIterations - 1; i += 2) {
         cardComponents.push(
             <div key={i} className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8">
                 <BlogCardHorizontal id={i} type="careerAdvice" />

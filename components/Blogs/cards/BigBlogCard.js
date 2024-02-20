@@ -73,9 +73,11 @@ const BigBlogCard = ({ id, type }) => {
                     </div>
                 </Link>
             )}
-            <button className="text-lg bg-blue-500 text-white py-3 px-3 w-32 rounded-full">
-                Read me
-            </button>
+            <Link href={url}>
+                <button className="text-lg bg-blue-500 text-white py-3 px-3 w-32 rounded-full">
+                    Read me
+                </button>
+            </Link>
         </div>
     );
 }

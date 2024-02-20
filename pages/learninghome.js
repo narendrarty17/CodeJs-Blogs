@@ -12,8 +12,8 @@ export const LearningHome = () => {
         <>
             <Header />
             <div div className="flex flex-col gap-14">
-                <SegmentHeader title="Career Advice" />
-                <SegmentMainArticle />
+                <SegmentHeader title="Learning" />
+                <SegmentMainArticle type="learning" id={0} />
                 <OverlappingCardSegment type="home" />
                 <Newsletter />
             </div>

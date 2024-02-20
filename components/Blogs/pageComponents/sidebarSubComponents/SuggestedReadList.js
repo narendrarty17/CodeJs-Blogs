@@ -25,7 +25,7 @@ const SuggestedReadList = ({ suggestedReads }) => {
                         <div className="flex items-center mb-1">
                             {/* Author Image */}
                             <img
-                                src={`/images/blogs/blogContent/${read.type}/${read.id}/${read.authorImage}`}
+                                src={`/images/blogs/blogContent/authorImgs/${read.authorImage}`}
                                 alt="Author"
                                 className="w-6 h-6 rounded-full mr-2"
                             />

@@ -8,7 +8,7 @@ const OverlappingCardSegment = ({ type }) => {
     const displaySeeMoreBtn = !(type == 'home');
 
     const cardComponents = [];
-    for (let i = 1; i <= numIterations; i += 3) {
+    for (let i = 1; i <= numIterations - 1; i += 3) {
         cardComponents.push(
             <div className="flex flex-wrap flex-col gap-10 mr-[10px] items-center md:justify-between md:flex-row">
                 <OverlappingCard id={i} type="learning" />

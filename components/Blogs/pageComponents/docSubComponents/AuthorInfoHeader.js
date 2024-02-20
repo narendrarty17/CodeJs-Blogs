@@ -11,7 +11,7 @@ const AuthorInfoHeader = ({ author }) => {
             {/* Author Info */}
             <div className="flex items-center">
                 <img
-                    src={`${BlogImgsBaseDir}/sections/${type}/${id}/${author.image}`}
+                    src={`${BlogImgsBaseDir}/authorImgs/${author.image}`}
                     alt="Author Logo"
                     className="w-10 h-10 rounded-full mr-4"
                 />
