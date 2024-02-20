@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react'
-import { BlogImgsBaseDir } from '@/components/baseDirLinks';
+import { BlogImgsBaseDir } from '@/components/Blogs/baseDirLinks';
+import { baseUrl } from "@/components/Blogs/baseUrls";
 
 export const OverlappingCard = ({ id, type }) => {
     const [blogData, setBlogData] = useState(null);
@@ -27,7 +28,7 @@ export const OverlappingCard = ({ id, type }) => {
     return (
         <>
             {blogData && (
-                <Link href={url}>
+                <Link href={`${baseUrl}${url}`}>
                     <div className="relative inline-block w-[300px] md:w-[320px] 2xl:w-[400px] h-[180px] md:h-[180px] 2xl:h-[225px] mb-14">
                         <img
                             className="w-[300px] md:w-[300px] 2xl:w-[400px] h-[180px] md:h-[180px] 2xl:h-[225px]"

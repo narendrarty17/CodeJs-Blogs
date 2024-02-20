@@ -1,11 +1,7 @@
-import { useContext } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
-import { IdTypeContext } from "../Context";
-import { BlogImgsBaseDir } from "@/components/baseDirLinks";
+import { BlogImgsBaseDir } from "@/components/Blogs/baseDirLinks";
 
 const AuthorInfoHeader = ({ author }) => {
-    const { id, type } = useContext(IdTypeContext);
-
     return (
         <div className="flex items-center justify-between mb-6">
             {/* Author Info */}

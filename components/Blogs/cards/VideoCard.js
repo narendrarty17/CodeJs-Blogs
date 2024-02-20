@@ -1,6 +1,7 @@
-import { BlogImgsBaseDir } from '@/components/baseDirLinks';
+import { BlogImgsBaseDir } from '@/components/Blogs/baseDirLinks';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
+import { baseUrl } from "@/components/Blogs/baseUrls";
 
 const VideoCard = ({ id, type }) => {
     const [blogData, setBlogData] = useState(null);
@@ -27,7 +28,7 @@ const VideoCard = ({ id, type }) => {
     return (
         <div>
             {blogData && (
-                <Link href={url}>
+                <Link href={`${baseUrl}${url}`}>
                     <div className="max-w-lg md:max-w-md flex flex-row gap-5 md:gap-0 md:flex-col mx-auto">
                         {/* Image Section */}
                         <div className="mb-2">

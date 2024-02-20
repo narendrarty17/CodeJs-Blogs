@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { BlogImgsBaseDir } from '@/components/baseDirLinks';
+import { baseUrl } from "@/components/Blogs/baseUrls";
+import { BlogImgsBaseDir } from '@/components/Blogs/baseDirLinks';
 
 const BlogCardHorizontal = ({ id, type }) => {
     const [blogData, setBlogData] = useState(null);
@@ -27,7 +28,7 @@ const BlogCardHorizontal = ({ id, type }) => {
     return (
         <div>
             {blogData && (
-                <Link href={url}>
+                <Link href={`${baseUrl}${url}`}>
                     <div className="max-w-lg flex">
                         {/* Left Part - Image */}
                         <div className="flex-shrink-0">

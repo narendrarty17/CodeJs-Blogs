@@ -1,6 +1,7 @@
 import BlogCardHorizontal from "@/components/Blogs/cards/BlogCardHorizontal";
-import Link from "next/link";
 import List from "@/blogData/careerAdvice/index.json";
+import Link from 'next/link';
+import { baseUrl } from "@/components/Blogs/baseUrls";
 
 const DisplayCards = ({ type }) => {
     const listLength = List.length;
@@ -21,7 +22,7 @@ const DisplayCards = ({ type }) => {
         <div className="flex flex-col items-center gap-8 md:gap-10 mt-8">
             {cardComponents}
             {displaySeeMoreBtn && (
-                <Link href="/careerhome">
+                <Link href={`${baseUrl}/careerhome`}>
                     <button className="text-lg border-2 border-white text-white py-3 px-6 rounded-full">
                         See More
                     </button>

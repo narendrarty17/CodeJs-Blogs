@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { BlogImgsBaseDir } from '@/components/baseDirLinks';
+import { BlogImgsBaseDir } from '@/components/Blogs/baseDirLinks';
+import { baseUrl } from "@/components/Blogs/baseUrls";
 
 const BlogCardVertical = ({ id, type }) => {
     const [blogData, setBlogData] = useState(null);
@@ -27,7 +28,7 @@ const BlogCardVertical = ({ id, type }) => {
     return (
         <div>
             {blogData && (
-                <Link href={url}>
+                <Link href={`${baseUrl}${url}`}>
                     <div className="max-w-sm mx-auto">
                         {/* Image Section */}
                         <div className="mb-2">

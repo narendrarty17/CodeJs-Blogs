@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useContext } from "react";
 import { IsSmallScreenContext } from '../Context';
-import { BlogImgsBaseDir } from "@/components/baseDirLinks";
+import { BlogImgsBaseDir } from "@/components/Blogs/baseDirLinks";
+import { baseUrl } from "@/components/Blogs/baseUrls";
 
 const SuggestedReadList = ({ suggestedReads }) => {
     const isSmallScreen = useContext(IsSmallScreenContext);
@@ -9,7 +10,7 @@ const SuggestedReadList = ({ suggestedReads }) => {
 
     return (
         limitedSuggestedReads.map((read) => (
-            <Link href={`/blog?id=${read.id}&type=${read.type}`}>
+            <Link href={`${baseUrl}/blog?id=${read.id}&type=${read.type}`}>
                 <li key={read.id} className="flex items-start mb-4 mr-4 w-[350px] lg:w-auto lg:mb-4 lg:mr-0">
                     {/* Suggested Read Image (Left) */}
                     <div className="pr-4">

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import ParseParagraph from "./ParseParagraph";
 import SubSections from "./SubSections";
 import { IdTypeContext } from "./../Context";
-import { BlogImgsBaseDir } from "@/components/baseDirLinks";
+import { BlogImgsBaseDir } from "@/components/Blogs/baseDirLinks";
 
 const Section = ({ section }) => {
     const { id, type } = useContext(IdTypeContext);

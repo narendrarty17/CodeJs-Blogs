@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from "next/link";
-import { BlogImgsBaseDir } from '@/components/baseDirLinks';
+import { BlogImgsBaseDir } from '@/components/Blogs/baseDirLinks';
+import { baseUrl } from '@/components/Blogs/baseUrls';
 
 function limitLetters(text, maxLength) {
     if (text.length <= maxLength) {
@@ -36,7 +37,7 @@ const BigBlogCard = ({ id, type }) => {
         <div className="flex flex-col gap-4">
             {/* Adding a conditional rendering to ensure blogData is available */}
             {blogData && (
-                <Link href={url}>
+                <Link href={`${baseUrl}${url}`}>
                     <div className="max-w-lg mx-auto">
                         {/* Image Section */}
                         <div className="mb-2">
