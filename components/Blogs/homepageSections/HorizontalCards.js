@@ -1,7 +1,7 @@
 import BlogCardHorizontal from "@/components/Blogs/cards/BlogCardHorizontal";
 import List from "@/blogData/careerAdvice/index.json";
 import Link from 'next/link';
-import { baseUrl } from "@/components/Blogs/baseUrls";
+import { baseUrl } from '@/components/Blogs/basePath';
 
 const DisplayCards = ({ type }) => {
     const listLength = List.length;

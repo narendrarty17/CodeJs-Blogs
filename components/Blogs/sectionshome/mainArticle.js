@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { BlogImgsBaseDir } from '@/components/Blogs/baseDirLinks';
+import { BlogImgsBaseDir } from '@/components/Blogs/basePath';
 
 function limitLetters(text, maxLength) {
     if (text.length <= maxLength) {

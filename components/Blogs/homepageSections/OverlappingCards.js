@@ -1,7 +1,7 @@
 import OverlappingCard from "@/components/Blogs/cards/OverlappingCard";
 import List from "@/blogData/learning/index.json";
 import Link from "next/link";
-import { baseUrl } from "@/components/Blogs/baseUrls";
+import { baseUrl } from '@/components/Blogs/basePath';
 
 const OverlappingCardSegment = ({ type }) => {
     const listLength = List.length;

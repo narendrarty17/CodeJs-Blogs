@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { BlogImgsBaseDir, baseUrl } from '@/components/Blogs/basePath';
 
-const BlogCardHorizontal = ({ id, type }) => {
+const BlogHorizontalSmall = ({ id, type }) => {
     const [blogData, setBlogData] = useState(null);
 
     // Constructing the URL for the blog
@@ -28,11 +28,11 @@ const BlogCardHorizontal = ({ id, type }) => {
         <div>
             {blogData && (
                 <Link href={`${baseUrl}${url}`}>
-                    <div className="max-w-lg flex">
+                    <div className="max-w-md flex">
                         {/* Left Part - Image */}
                         <div className="flex-shrink-0">
                             <img
-                                className="object-cover w-36 h-28 md:w-[140px] md:h-[120px] lg:w-64 lg:h-48 xl:w-72 xl:h-54 "
+                                className="object-cover w-36 h-24 md:w-[150px] md:h-[100px]"
                                 src={`${BlogImgsBaseDir}/sections/${type}/${id}/${blogData.iconImage}`}
                                 alt="Blog"
                             />
@@ -55,7 +55,7 @@ const BlogCardHorizontal = ({ id, type }) => {
 
                             </p>
                             {/* Blog Title */}
-                            <h2 className="text-md lg:text-lg">
+                            <h2 className="text-md">
                                 {blogData.title}
                             </h2>
                         </div>
@@ -66,4 +66,4 @@ const BlogCardHorizontal = ({ id, type }) => {
     );
 };
 
-export default BlogCardHorizontal;
+export default BlogHorizontalSmall;

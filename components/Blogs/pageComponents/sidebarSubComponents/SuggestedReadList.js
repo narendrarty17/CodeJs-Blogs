@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { useContext } from "react";
 import { IsSmallScreenContext } from '../Context';
-import { BlogImgsBaseDir } from "@/components/Blogs/baseDirLinks";
-import { baseUrl } from "@/components/Blogs/baseUrls";
+import { BlogImgsBaseDir, baseUrl } from '@/components/Blogs/basePath';
 
 const SuggestedReadList = ({ suggestedReads }) => {
     const isSmallScreen = useContext(IsSmallScreenContext);

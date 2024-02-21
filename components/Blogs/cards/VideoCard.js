@@ -1,7 +1,6 @@
-import { BlogImgsBaseDir } from '@/components/Blogs/baseDirLinks';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { baseUrl } from "@/components/Blogs/baseUrls";
+import { BlogImgsBaseDir, baseUrl } from '@/components/Blogs/basePath';
 
 const VideoCard = ({ id, type }) => {
     const [blogData, setBlogData] = useState(null);

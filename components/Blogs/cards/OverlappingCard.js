@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react'
-import { BlogImgsBaseDir } from '@/components/Blogs/baseDirLinks';
-import { baseUrl } from "@/components/Blogs/baseUrls";
+import { BlogImgsBaseDir, baseUrl } from '@/components/Blogs/basePath';
 
 export const OverlappingCard = ({ id, type }) => {
     const [blogData, setBlogData] = useState(null);

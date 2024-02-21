@@ -1,5 +1,5 @@
 import SocialMediaIcons from "./SocialMediaIcons";
-import { BlogImgsBaseDir } from "@/components/Blogs/baseDirLinks";
+import { BlogImgsBaseDir } from '@/components/Blogs/basePath';
 
 const AuthorInfoHeader = ({ author }) => {
     return (

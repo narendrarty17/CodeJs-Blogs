@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import SuggestedReads from "./sidebarSubComponents/SuggestedReads";
 import { IdTypeContext } from "./Context";
-import { BlogImgsBaseDir } from "@/components/Blogs/baseDirLinks";
+import { BlogImgsBaseDir } from '@/components/Blogs/basePath';
 
 const Sidebar = ({ author }) => {
     const { id, type } = useContext(IdTypeContext);

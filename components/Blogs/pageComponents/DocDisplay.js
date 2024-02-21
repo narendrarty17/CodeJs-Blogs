@@ -6,7 +6,7 @@ import Section from './docSubComponents/Section';
 import AuthorInfoHeader from './docSubComponents/AuthorInfoHeader';
 import Sidebar from './Sidebar';
 import { IdTypeContext } from './Context';
-import { BlogImgsBaseDir } from '@/components/Blogs/baseDirLinks';
+import { BlogImgsBaseDir } from '@/components/Blogs/basePath';
 
 // Define the DocDisplay component
 const DocDisplay = () => {
