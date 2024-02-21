@@ -15,7 +15,7 @@ const ArticlesList = () => {
     return (
         <div>
             <SegmentHeader title="Latest Articles" />
-            <div className='flex flex-col gap-12 w-full md:gap-20 my-20 md:flex-row justify-center px-8'>
+            <div className='flex flex-col gap-12 w-full md:gap-20 my-12 md:flex-row justify-center px-8'>
                 <LatestArticles />
                 <PopularArticles />
             </div>
