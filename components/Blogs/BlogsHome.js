@@ -2,9 +2,9 @@ import Report from "@/components/Blogs/homepageSections/Report";
 import MainBlogSection from "./homeComponents/MainBlogSection";
 import BlogHeader from "./homeComponents/BlogHeader";
 import Newsletter from "@/components/Blogs/homepageSections/NewsLetter";
-import HorizontalCardSegment from "@/components/Blogs/homepageSections/HorizontalCards";
-import VideoCardSegment from "@/components/Blogs/homepageSections/VideoCards";
-import OverlappingCardSegment from "@/components/Blogs/homepageSections/OverlappingCards";
+import HorizontalCardSegment from "@/components/Blogs/homepageSections/HorizontalCardsSegment";
+import VideoCardSegment from "@/components/Blogs/homepageSections/VideoCardsSegment";
+import OverlappingCardSegment from "@/components/Blogs/homepageSections/OverlappingCardsSegment";
 
 const BlogHomepage = () => {
     return (
@@ -12,7 +12,7 @@ const BlogHomepage = () => {
             <BlogHeader />
             <MainBlogSection />
             <Report />
-            <HorizontalCardSegment type="careerAdvice" />
+            <HorizontalCardSegment type="careerAdvice" place="home" />
             <VideoCardSegment />
             <OverlappingCardSegment type="learning" />
             <Newsletter />

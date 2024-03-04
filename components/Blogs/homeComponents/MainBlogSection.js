@@ -1,6 +1,6 @@
 import React from 'react';
-import BlogCardVertical from '@/components/Blogs/cards/BlogCardVertical';
-import BigBlogCard from '@/components/Blogs/cards/BigBlogCard';
+import BlogCardVertical from '@/components/Blogs/cards/CardVertical';
+import BigBlogCard from '@/components/Blogs/cards/BigCard';
 
 const MainBlogSection = () => {
     return (

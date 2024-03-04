@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "iconImage": "/blogIcon.png",
+    "iconImage": "blogIcon.png",
     "authorImage": "vishal_sharma.png",
     "authorName": "Vishal Sharma",
     "title": "Understanding React.js: An Introduction",

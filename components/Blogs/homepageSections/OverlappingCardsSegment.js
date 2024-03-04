@@ -3,15 +3,14 @@ import List from "@/blogData/learning/index.json";
 import Link from "next/link";
 import { baseUrl } from '@/components/Blogs/basePath';
 
-const OverlappingCardSegment = ({ type }) => {
-    const listLength = List.length;
-    const numIterations = type == 'home' ? listLength : 3;
-    const displaySeeMoreBtn = !(type == 'home');
+const OverlappingCardSegment = ({ type, place }) => {
+    const numIterations = place == 'segmenthome' ? 6 : 3;
+    const url = place == 'segmenthome' ? `/articleslist?type=${type}` : '/learninghome';
 
     const cardComponents = [];
-    for (let i = 1; i <= numIterations - 1; i += 3) {
+    for (let i = 1; i <= numIterations; i += 3) {
         cardComponents.push(
-            <div className="flex flex-wrap flex-col gap-10 mr-[10px] items-center md:justify-between md:flex-row">
+            <div key={i} className="flex flex-wrap flex-col gap-10 mr-[10px] items-center md:justify-between md:flex-row">
                 <OverlappingCard id={i} type="learning" />
                 <OverlappingCard id={i + 1} type="learning" />
                 <OverlappingCard id={i + 2} type="learning" />
@@ -26,13 +25,11 @@ const OverlappingCardSegment = ({ type }) => {
                 <h1 className="text-2xl">Learning</h1>
             </div>
             {cardComponents}
-            {displaySeeMoreBtn && (
-                <Link href={`${baseUrl}/learninghome`}>
-                    <button className="text-lg border-2 border-white text-white py-3 px-6 rounded-full">
-                        See More
-                    </button>
-                </Link>
-            )}
+            <Link href={`${baseUrl}${url}`}>
+                <button className="text-lg border-2 border-white text-white py-3 px-6 rounded-full">
+                    See More
+                </button>
+            </Link>
         </div>
     )
 }
